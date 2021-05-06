@@ -27,8 +27,13 @@ gulp.task('serve', function(done) {
         server: './'
     });
 
-    gulp.watch("sass/*.s*ss", gulp.series('sass'));
-    gulp.watch("./*.*").on('change', () => {
+    gulp.watch("sass/*", gulp.series('sass'));
+    gulp.watch("sass/blocks/*", gulp.series('sass'));
+    gulp.watch("./*").on('change', () => {
+        browserSync.reload();
+        done();
+    });
+    gulp.watch("sass/blocks/*").on('change', () => {
         browserSync.reload();
         done();
     });

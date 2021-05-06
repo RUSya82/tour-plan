@@ -1,0 +1,48 @@
+.header
+  &__logo
+    max-width: 177px
+.header-top
+  background-color: #ffffff
+  height: 120px
+  &__container
+    height: 100%
+    +flex-sa-center
+  &__search
+    margin-right: auto
+    margin-left: 108px
+.search
+  width: 350px
+  height: 40px
+  position: relative
+  overflow: hidden
+  border-radius: 6px
+  height: 40px
+  &__input
+    width: 350px
+    height: 100%
+    border: none
+    background-color: $site-background-lite
+    font-size: 12px
+    line-height: 15px
+    color: $font-grey
+    padding-left: 23px
+    padding-right: 90px
+  &__btn
+    position: absolute
+    right: 0
+    top: 0
+    height: 100%
+    width: 65px
+    background-color: $buttons-red
+    border: none
+.user
+  +flex-fs-center
+  &__avatar
+    width: 40px
+    height: 40px
+    object-fit: cover
+    border-radius: 50%
+  &__name
+    margin-left: 18px
+    font-size: 14px
+    line-height: 18px
