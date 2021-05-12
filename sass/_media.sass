@@ -10,10 +10,10 @@
       padding: 22px 0
       font-size: 12px
       line-height: 15px
-  .navbar-top
-    height: 100px
-    &__search
-      margin-left: auto
+    &-top
+      height: 100px
+      &__search
+        margin-left: auto
   .logo
     max-width: 132px
   .search
@@ -22,4 +22,29 @@
   .container
     max-width: 700px
     width: 92%
+  .navbar
+    &-menu
+      display: none
+    &-top
+      &__search
+        display: none
+      &__user
+        display: none
+      &__menu-button
+        display: flex
+        border: none
+  .menu-button
+    +flex-sb-center(column)
+    height: 11px
+    padding: 0
+    background-color: transparent
+    &__line
+      height: 1px
+      width: 16px
+      background-color: $font-grey
+@media (max-width: 320px)
+  .logo
+    max-width: 100px
+
+
 
