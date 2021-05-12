@@ -33,10 +33,10 @@ gulp.task('serve', function(done) {
         browserSync.reload();
         done();
     });
-    gulp.watch("sass/blocks/*").on('change', () => {
-        browserSync.reload();
-        done();
-    });
+    // gulp.watch("sass/blocks/*").on('change', () => {
+    //     browserSync.reload();
+    //     done();
+    // });
     done();
 });
 
