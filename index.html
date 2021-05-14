@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <title>Best tour plan - Hotel Booking</title>
 </head>
 <body>
@@ -104,8 +105,44 @@
                 </div>
             </div>
         </div>
-        <div class="hotel-bottom"></div>
+        <div class="hotel-bottom">
+            <div class="container hotel-bottom__container">
+                <div class="hotel-slider">
+                    <!-- Slider main container -->
+                    <div class="swiper-container hotel-slider__container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper hotel-slider__wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide hotel-slider__item">
+                                <img src="img/slider-hotel-item-1.png" alt="">
+                            </div>
+                            <div class="swiper-slide hotel-slider__item">
+                                <img src="img/slider-hotel-item-2.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide hotel-slider__item">
+                                <img src="img/slider-hotel-item-3.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide hotel-slider__item">
+                                <img src="img/slider-hotel-item-4.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide hotel-slider__item">
+                                <img src="img/slider-hotel-item-5.jpg" alt="">
+                            </div>
+
+                        </div>
+
+                        <!-- If we need navigation buttons -->
+                        <button class="hotel-slider__arrow hotel-slider__arrow--prev"></button>
+                        <button class="hotel-slider__arrow hotel-slider__arrow--next"></button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--   hotel-bottom     -->
     </div>
 </header>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
