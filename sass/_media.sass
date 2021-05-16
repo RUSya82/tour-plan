@@ -36,6 +36,14 @@
     &__right
       +flex-sb
       width: 100%
+  .reviews
+    &__header
+      font-size: 30px
+      line-height: 38px
+    &-slider
+      margin-top: 50px
+      &__item
+        max-width: 580px
 @media (max-width: 768px)
   .container
     max-width: 700px
@@ -77,6 +85,9 @@
         justify-content: space-between
     &-slider
       height: 350px
+      &__container
+        height: 100%
+        width: 100%
     &-booking
       width: 100%
     &-map
@@ -85,10 +96,8 @@
       &__right
         flex-direction: column
         min-height: 450px
-  .swiper-container
-    height: 100%
-    width: 100%
   .newsletter
+    padding: 76px 0 83px 0
     &-container
       +flex(column)
       align-items: flex-start
@@ -99,6 +108,24 @@
         font-size: 30px
     &-input
       width: 280px
+  .reviews
+    &__header
+      font-size: 18px
+      line-height: 23px
+    &-slider
+      margin-top: 42px
+      &__item
+        padding-left: 30px
+        padding-right: 30px
+        &:before, &:after
+          display: none
+      &__button
+        top: 45px
+        &--prev
+          left: 20%
+        &--next
+          right: 20%
+
 @media (max-width: 320px)
   .logo
     max-width: 100px
