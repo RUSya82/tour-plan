@@ -403,7 +403,8 @@ h1, h2, h3, h4, h5, h6, span, p {
     height: 100%;
     width: 65px;
     background-color: #EC1F46;
-    border: none; }
+    border: none;
+    color: #fff; }
 
 .user {
   display: flex;
@@ -605,6 +606,53 @@ h1, h2, h3, h4, h5, h6, span, p {
   color: #fff;
   border-radius: 3px; }
 
+.newsletter {
+  position: relative;
+  padding: 98px 0 87px 0;
+  background: url("../img/newsletter-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .newsletter-container {
+    position: relative;
+    max-width: 731px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+  .newsletter:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 34, 61, 0.8); }
+  .newsletter__text {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 30px; }
+    .newsletter__text--big {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 45px;
+      text-transform: uppercase; }
+  .newsletter-input {
+    height: 55px; }
+    .newsletter-input__text {
+      font-weight: 300;
+      font-size: 14px;
+      color: #BDBDBD; }
+    .newsletter-input__btn {
+      font-weight: bold;
+      font-size: 12px;
+      color: #FFFFFF; }
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px; }
@@ -670,30 +718,43 @@ h1, h2, h3, h4, h5, h6, span, p {
       height: 1px;
       width: 16px;
       background-color: #333333; }
-  .hotel-rating {
-    display: none; }
-  .hotel__offer {
-    margin-left: 0;
-    order: -1; }
-  .hotel__stars {
-    flex-basis: auto; }
-  .hotel__name {
-    flex: 0 0 100%;
-    margin-top: 10px; }
-  .hotel-data__top {
-    justify-content: space-between; }
-  .hotel-slider {
-    height: 350px; }
-  .hotel-booking {
-    width: 100%; }
-  .hotel-map {
-    width: 100%; }
-  .hotel-bottom__right {
-    flex-direction: column;
-    min-height: 450px; }
+  .hotel {
+    padding-bottom: 60px; }
+    .hotel-rating {
+      display: none; }
+    .hotel__offer {
+      margin-left: 0;
+      order: -1; }
+    .hotel__stars {
+      flex-basis: auto; }
+    .hotel__name {
+      flex: 0 0 100%;
+      margin-top: 10px; }
+    .hotel-data__top {
+      justify-content: space-between; }
+    .hotel-slider {
+      height: 350px; }
+    .hotel-booking {
+      width: 100%; }
+    .hotel-map {
+      width: 100%; }
+    .hotel-bottom__right {
+      flex-direction: column;
+      min-height: 450px; }
   .swiper-container {
     height: 100%;
-    width: 100%; } }
+    width: 100%; }
+  .newsletter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+  .newsletter__text {
+    margin-bottom: 37px;
+    font-size: 20px; }
+    .newsletter__text--big {
+      font-size: 30px; }
+  .newsletter-input {
+    width: 280px; } }
 
 @media (max-width: 320px) {
   .logo {
