@@ -12,9 +12,6 @@ const hotelSwiper = new Swiper('.swiper-container', {
       enable: true,
       onlyInViewport: true
     },
-    mousewheel: {
-        sensitivity: 1,
-    }
 });
 
 document.addEventListener('click', e => {

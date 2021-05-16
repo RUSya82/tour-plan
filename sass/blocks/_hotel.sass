@@ -38,7 +38,11 @@
       font-size: 10px
   &-bottom
     &__container
-      display: flex
+      +flex-sb
+      flex-wrap: wrap
+    &__right
+      +flex-sb(column)
+
   &-slider
     width: 728px
     height: 450px
@@ -78,9 +82,62 @@
       &--next
         background-image: url("../img/slider-arrow-right.svg")
         right: 10px
+  &-booking
+    width: 350px
+    height: 210px
+    background-color: $site-background-dark
+    border-radius: 8px
+    font-family: "Nunito", sans-serif
+    color: $font-white
+    padding: 29px
+
+    &__guests
+      +flex
+    &__room
+      +flex
+    &__phone
+      +flex
+    &__price-start
+      font-size: 10px
+    &__price-dollars
+      font-size: 24px
+      font-weight: bold
+      line-height: 33px
+    &__per-room
+      font-size: 12px
+    &__right
+      margin-top: 4px
+    &__right-item
+      +flex-sb
+      font-size: 12px
+      line-height: 16px
+      height: 35%
+    &__text
+      margin-left: 4px
+    &__quick
+      margin-top: 9px
+      font-weight: 600
+      font-size: 18px
+      line-height: 25px
+    &__button
+      width: 100%
+      font-size: 14px
+      font-weight: 600
+      margin-top: 17px
+      padding: 13px 0
+  &-map
+    width: 347px
+    height: 213px
+    overflow: hidden
+    border-radius: 8px
 .swiper-container
   width: 100%
   height: 100%
+.icon-wrapper
+  height: 14px
+  width: 14px
+.booking-row
+  +flex-sb
 
 
 .offer
