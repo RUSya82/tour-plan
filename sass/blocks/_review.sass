@@ -1,17 +1,27 @@
 .reviews
   height: 550px
-  padding: 70px 0 40px 0
+  padding: 39px 0 40px 0
   &__header
     font-weight: bold
     font-size: 36px
     line-height: 45px
     text-align: center
     text-transform: uppercase
+  &-stars
+    &__wrapper
+      width: 8px
+      margin-right: 2px
+      height: 8px
+    &__image
+      width: 8px
+      height: 8px
+      object-fit: cover
+      margin-right: 1px
   &-slider
     margin-top: 70px
     &__item
       position: relative
-      padding: 54px 60px 30px 60px
+      padding: 55px 60px 30px 63px
       +flex(column)
       align-items: center
       max-width: 730px
@@ -47,7 +57,7 @@
       width: 90px
       height: 90px
     &__user-name
-      font-weight: bold
+      font-weight: 500
       font-size: 12px
       line-height: 15px
       color: $buttons-red
@@ -58,18 +68,19 @@
       margin-top: 10px
     &__stars
       margin-top: 5px
+      display: flex
     &__user-message
       font-weight: normal
       font-size: 12px
       line-height: 160%
       text-align: justify
-      margin-top: 32px
-      max-width: 537px
+      margin-top: 30px
+      max-width: 536px
     &__button
       position: absolute
       width: 30px
       height: 30px
-      top: 50%
+      top: 46%
       transform: translateY(-50%)
       background-repeat: no-repeat
       background-position: center
@@ -79,7 +90,7 @@
       background-color: transparent
       &--prev
         background-image: url("../img/reviews-slider-arrow-left.svg")
-        left: 0
+        left: 19px
       &--next
         background-image: url("../img/reviews-slider-arrow-right.svg")
-        right: 0
+        right: 17px
