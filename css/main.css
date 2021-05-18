@@ -740,7 +740,9 @@ h1, h2, h3, h4, h5, h6, span, p {
       line-height: 160%;
       text-align: justify;
       margin-top: 30px;
-      max-width: 536px; }
+      max-width: 536px;
+      max-height: 115px;
+      overflow-y: auto; }
     .reviews-slider__button {
       position: absolute;
       width: 30px;
@@ -811,7 +813,9 @@ h1, h2, h3, h4, h5, h6, span, p {
   .reviews-slider {
     margin-top: 50px; }
     .reviews-slider__item {
-      max-width: 580px; } }
+      max-width: 580px; }
+    .reviews-slider__user-massage {
+      max-height: 140px; } }
 
 @media (max-width: 768px) {
   .container {
@@ -856,6 +860,10 @@ h1, h2, h3, h4, h5, h6, span, p {
         left: -3px; }
       .reviews-slider__button--next {
         right: -3px; } }
+
+@media (max-width: 700px) {
+  .navbar-menu {
+    font-size: 10px; } }
 
 @media (max-width: 580px) {
   .navbar-menu {
@@ -981,7 +989,8 @@ h1, h2, h3, h4, h5, h6, span, p {
         left: 33px; }
       .reviews-slider__button--next {
         right: 35px; }
-    .reviews-slider__user-massage {
+    .reviews-slider__user-message {
       font-weight: normal;
       font-size: 12px;
-      line-height: 160%; } }
+      line-height: 160%;
+      max-height: 285px; } }
