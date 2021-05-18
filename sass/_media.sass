@@ -23,6 +23,8 @@
     max-width: 132px
   .search
     width: 340px
+    &__input
+      padding-left: 23px
   .hotel
     &-booking
       width: 340px
@@ -36,6 +38,11 @@
     &__right
       +flex-sb
       width: 100%
+  .newsletter
+    &-input
+      width: 350px
+      &__text
+        padding-left: 34px
   .reviews
     &__header
       font-size: 30px
@@ -49,6 +56,54 @@
     max-width: 700px
     width: 92%
   .navbar
+    &-top
+      &__search
+        margin-left: 49px
+    &__container
+      max-width: 672px
+  .breadcrumbs
+    &__container
+      padding: 20px 0
+
+  .hotel
+    padding-bottom: 57px
+    &-slider
+      &__container
+        height: 100%
+        width: 100%
+    &-booking
+      margin-right: 20px
+    &__container
+      padding-top: 21px
+
+  .newsletter
+    padding: 94px 0 55px 0
+    &-container
+      align-items: flex-start
+    &__text
+      margin-bottom: 37px
+    &-input
+      margin-top: 9px
+  .reviews
+    &__container
+      width: 90%
+    &-slider
+      margin-top: 51px
+      &__item
+        padding-left: 66px
+        padding-right: 59px
+        padding-top: 53px
+        &:before, &:after
+          display: none
+      &__button
+        top: 50%
+        &--prev
+          left: -3px
+        &--next
+          right: -3px
+
+@media (max-width: 580px)
+  .navbar
     &-menu
       display: none
     &-top
@@ -59,15 +114,6 @@
       &__menu-button
         display: flex
         border: none
-  .menu-button
-    +flex-sb-center(column)
-    height: 11px
-    padding: 0
-    background-color: transparent
-    &__line
-      height: 1px
-      width: 16px
-      background-color: $font-grey
   .hotel
     padding-bottom: 60px
     &-rating
@@ -90,60 +136,107 @@
         width: 100%
     &-booking
       margin-right: 20px
-
+      width: 100%
+    &-bottom
+      &__right
+        flex-direction: column
+        min-height: 450px
+    &-map
+      width: 100%
+  .menu-button
+    +flex-sb-center(column)
+    height: 11px
+    padding: 0
+    background-color: transparent
+    &__line
+      height: 1px
+      width: 16px
+      background-color: $font-grey
   .newsletter
-    padding: 76px 0 83px 0
     &-container
       +flex(column)
       align-items: flex-start
-    &__text
-      margin-bottom: 37px
-      font-size: 20px
-      &--big
-        font-size: 30px
     &-input
       width: 280px
   .reviews
-    &__header
-      font-size: 18px
-      line-height: 23px
     &-slider
-      margin-top: 42px
-      &__item
-        padding-left: 30px
-        padding-right: 30px
-        &:before, &:after
-          display: none
       &__button
         top: 45px
         &--prev
           left: 20%
         &--next
           right: 20%
-@media (max-width: 580px)
-  .hotel
-    &-bottom
-      &__right
-        flex-direction: column
-        min-height: 450px
-    &-booking
-      width: 100%
-      margin-right: 0
-    &-map
-      width: 100%
 @media (max-width: 320px)
+  .container
+    width: 87%
   .logo
     max-width: 100px
+  .breadcrumbs
+    &__container
+      padding: 23px 0
   .hotel
+    padding-bottom: 40px
+    &__container
+      padding-top: 0
+      padding-bottom: 36px
+    &__stars
+      margin-right: 9px
     &-slider
       height: 180px
     &-bottom
       &__right
-        min-height: 410px
+        min-height: 0
+      &__slider
+        margin-bottom: 20px
+      &__booking
+        margin-right: 0
+        margin-bottom: 22px
     &-booking
       height: 210px
-    &-map
-      height: 180px
+      padding: 30px 21px 29px 24px
 
+    &-map
+      height: 171px
+  .navbar
+    &-top
+      height: 70px
+      &__menu-button
+        margin-top: 6px
+  .newsletter
+    padding: 73px 0 83px 0
+    &__container
+      display: flex
+      flex-direction: row
+      align-items: flex-start
+      flex-wrap: wrap
+      align-content: space-between
+    &-input
+      &__text
+        padding-left: 19px
+    &__text
+      font-size: 20px
+      margin-bottom: 25px
+      &--big
+        font-size: 30px
+  .reviews
+    &__header
+      font-weight: bold
+      font-size: 18px
+      line-height: 23px
+      margin: 0 10px
+    &-slider
+      margin-top: 43px
+      &__item
+        padding: 53px 33px 33px 33px
+      &__button
+        top: 43px
+        &--prev
+          left: 33px
+        &--next
+          right: 35px
+      &__user-massage
+        font-weight: normal
+        font-size: 12px
+        line-height: 160%
 
 

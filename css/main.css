@@ -722,7 +722,7 @@ h1, h2, h3, h4, h5, h6, span, p {
       width: 90px;
       height: 90px; }
     .reviews-slider__user-name {
-      font-weight: 500;
+      font-weight: 600;
       font-size: 12px;
       line-height: 15px;
       color: #EC1F46; }
@@ -786,6 +786,8 @@ h1, h2, h3, h4, h5, h6, span, p {
     max-width: 132px; }
   .search {
     width: 340px; }
+    .search__input {
+      padding-left: 23px; }
   .hotel-booking {
     width: 340px; }
   .hotel-map {
@@ -799,6 +801,10 @@ h1, h2, h3, h4, h5, h6, span, p {
     flex-direction: row;
     justify-content: space-between;
     width: 100%; }
+  .newsletter-input {
+    width: 350px; }
+    .newsletter-input__text {
+      padding-left: 34px; }
   .reviews__header {
     font-size: 30px;
     line-height: 38px; }
@@ -811,6 +817,47 @@ h1, h2, h3, h4, h5, h6, span, p {
   .container {
     max-width: 700px;
     width: 92%; }
+  .navbar-top__search {
+    margin-left: 49px; }
+  .navbar__container {
+    max-width: 672px; }
+  .breadcrumbs__container {
+    padding: 20px 0; }
+  .hotel {
+    padding-bottom: 57px; }
+    .hotel-slider__container {
+      height: 100%;
+      width: 100%; }
+    .hotel-booking {
+      margin-right: 20px; }
+    .hotel__container {
+      padding-top: 21px; }
+  .newsletter {
+    padding: 94px 0 55px 0; }
+    .newsletter-container {
+      align-items: flex-start; }
+    .newsletter__text {
+      margin-bottom: 37px; }
+    .newsletter-input {
+      margin-top: 9px; }
+  .reviews__container {
+    width: 90%; }
+  .reviews-slider {
+    margin-top: 51px; }
+    .reviews-slider__item {
+      padding-left: 66px;
+      padding-right: 59px;
+      padding-top: 53px; }
+      .reviews-slider__item:before, .reviews-slider__item:after {
+        display: none; }
+    .reviews-slider__button {
+      top: 50%; }
+      .reviews-slider__button--prev {
+        left: -3px; }
+      .reviews-slider__button--next {
+        right: -3px; } }
+
+@media (max-width: 580px) {
   .navbar-menu {
     display: none; }
   .navbar-top__search {
@@ -820,18 +867,6 @@ h1, h2, h3, h4, h5, h6, span, p {
   .navbar-top__menu-button {
     display: flex;
     border: none; }
-  .menu-button {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 11px;
-    padding: 0;
-    background-color: transparent; }
-    .menu-button__line {
-      height: 1px;
-      width: 16px;
-      background-color: #333333; }
   .hotel {
     padding-bottom: 60px; }
     .hotel-rating {
@@ -852,55 +887,101 @@ h1, h2, h3, h4, h5, h6, span, p {
         height: 100%;
         width: 100%; }
     .hotel-booking {
-      margin-right: 20px; }
-  .newsletter {
-    padding: 76px 0 83px 0; }
-    .newsletter-container {
-      display: flex;
+      margin-right: 20px;
+      width: 100%; }
+    .hotel-bottom__right {
       flex-direction: column;
-      align-items: flex-start; }
-    .newsletter__text {
-      margin-bottom: 37px;
-      font-size: 20px; }
-      .newsletter__text--big {
-        font-size: 30px; }
-    .newsletter-input {
-      width: 280px; }
-  .reviews__header {
-    font-size: 18px;
-    line-height: 23px; }
-  .reviews-slider {
-    margin-top: 42px; }
-    .reviews-slider__item {
-      padding-left: 30px;
-      padding-right: 30px; }
-      .reviews-slider__item:before, .reviews-slider__item:after {
-        display: none; }
-    .reviews-slider__button {
-      top: 45px; }
-      .reviews-slider__button--prev {
-        left: 20%; }
-      .reviews-slider__button--next {
-        right: 20%; } }
-
-@media (max-width: 580px) {
-  .hotel-bottom__right {
+      min-height: 450px; }
+    .hotel-map {
+      width: 100%; }
+  .menu-button {
+    display: flex;
     flex-direction: column;
-    min-height: 450px; }
-  .hotel-booking {
-    width: 100%;
-    margin-right: 0; }
-  .hotel-map {
-    width: 100%; } }
+    justify-content: space-between;
+    align-items: center;
+    height: 11px;
+    padding: 0;
+    background-color: transparent; }
+    .menu-button__line {
+      height: 1px;
+      width: 16px;
+      background-color: #333333; }
+  .newsletter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+  .newsletter-input {
+    width: 280px; }
+  .reviews-slider__button {
+    top: 45px; }
+    .reviews-slider__button--prev {
+      left: 20%; }
+    .reviews-slider__button--next {
+      right: 20%; } }
 
 @media (max-width: 320px) {
+  .container {
+    width: 87%; }
   .logo {
     max-width: 100px; }
-  .hotel-slider {
-    height: 180px; }
-  .hotel-bottom__right {
-    min-height: 410px; }
-  .hotel-booking {
-    height: 210px; }
-  .hotel-map {
-    height: 180px; } }
+  .breadcrumbs__container {
+    padding: 23px 0; }
+  .hotel {
+    padding-bottom: 40px; }
+    .hotel__container {
+      padding-top: 0;
+      padding-bottom: 36px; }
+    .hotel__stars {
+      margin-right: 9px; }
+    .hotel-slider {
+      height: 180px; }
+    .hotel-bottom__right {
+      min-height: 0; }
+    .hotel-bottom__slider {
+      margin-bottom: 20px; }
+    .hotel-bottom__booking {
+      margin-right: 0;
+      margin-bottom: 22px; }
+    .hotel-booking {
+      height: 210px;
+      padding: 30px 21px 29px 24px; }
+    .hotel-map {
+      height: 171px; }
+  .navbar-top {
+    height: 70px; }
+    .navbar-top__menu-button {
+      margin-top: 6px; }
+  .newsletter {
+    padding: 73px 0 83px 0; }
+    .newsletter__container {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      align-content: space-between; }
+    .newsletter-input__text {
+      padding-left: 19px; }
+    .newsletter__text {
+      font-size: 20px;
+      margin-bottom: 25px; }
+      .newsletter__text--big {
+        font-size: 30px; }
+  .reviews__header {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    margin: 0 10px; }
+  .reviews-slider {
+    margin-top: 43px; }
+    .reviews-slider__item {
+      padding: 53px 33px 33px 33px; }
+    .reviews-slider__button {
+      top: 43px; }
+      .reviews-slider__button--prev {
+        left: 33px; }
+      .reviews-slider__button--next {
+        right: 35px; }
+    .reviews-slider__user-massage {
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 160%; } }
