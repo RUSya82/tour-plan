@@ -7,6 +7,10 @@
       height: 100%
       width: 100%
       object-fit: cover
+  .activities
+    &-item
+      width: 230px
+      height: 230px
 @media (max-width: 992px)
   .container
     max-width: 710px
@@ -53,6 +57,14 @@
         max-width: 580px
       &__user-massage
         max-height: 140px
+  .activities
+    &-wrapper
+      flex-wrap: wrap
+    &-item
+      //width: 340px
+      width: 48%
+      height: 255px
+      margin-bottom: 20px
 @media (max-width: 768px)
   .container
     max-width: 700px
@@ -103,9 +115,21 @@
           left: -3px
         &--next
           right: -3px
+      &__user-message
+        max-height: 137px
+  .activities
+    padding-top: 82px
+    &-item
+      &__header
+        max-width: 200px
 @media (max-width: 700px)
-  .navbar-menu
-    font-size: 10px
+  .navbar
+    &-menu
+      font-size: 10px
+    &-top
+      &__search
+        width: 280px
+        margin-left: auto
 @media (max-width: 580px)
   .navbar
     &-menu
@@ -170,6 +194,13 @@
           left: 20%
         &--next
           right: 20%
+  .activities
+    &-wrapper
+      flex-direction: column
+      align-items: center
+    &-item
+      width: 280px
+      height: 255px
 @media (max-width: 320px)
   .container
     width: 87%
@@ -223,6 +254,7 @@
       &--big
         font-size: 30px
   .reviews
+    padding-bottom: 50px
     &__header
       font-weight: bold
       font-size: 18px
@@ -231,7 +263,7 @@
     &-slider
       margin-top: 43px
       &__item
-        padding: 53px 33px 33px 33px
+        padding: 53px 30px 33px 30px
       &__button
         top: 43px
         &--prev
@@ -243,5 +275,14 @@
         font-size: 12px
         line-height: 160%
         max-height: 285px
+  .activities
+    padding-top: 43px
+    padding-bottom: 60px
+    &__header
+      font-size: 18px
+      line-height: 23px
+      margin-bottom: 36px
+    &-item
+      margin-bottom: 24px
 
 

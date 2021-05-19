@@ -6,6 +6,10 @@
   +flex($direction)
   justify-content: flex-start
 
+=flex-fe($direction: row)
+  +flex($direction)
+  justify-content: flex-end
+
 =flex-center($direction: row)
   +flex($direction)
   justify-content: center
@@ -37,6 +41,10 @@
 =flex-fs-center($direction: row)
   +flex-fs($direction)
   align-items: center
+
+=flex-fe-fs($direction: row)
+  +flex-fe($direction)
+  align-items: flex-start
 
 =no-wrap
   display: flex
