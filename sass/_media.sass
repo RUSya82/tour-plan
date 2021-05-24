@@ -217,6 +217,7 @@
       line-height: 15px
       &--visible
         display: block
+        overflow: auto
       &__wrapper
         flex-direction: column
       &__item
@@ -301,6 +302,8 @@
           left: 20%
         &--next
           right: 20%
+    &__header
+      font-size: 23px
   .activities
     &-wrapper
       flex-direction: column
@@ -308,6 +311,8 @@
     &-item
       width: 280px
       height: 255px
+    &__header
+      +flex-center
   .footer
     padding-top: 69px
     &__wrapper
@@ -399,6 +404,7 @@
       flex-wrap: wrap
       align-content: space-between
     &-input
+      align-self: center
       &__text
         padding-left: 19px
     &__text
@@ -432,6 +438,7 @@
     padding-top: 43px
     padding-bottom: 33px
     &__header
+      +flex-fs
       font-size: 15px
       line-height: 23px
       margin-bottom: 36px

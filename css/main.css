@@ -1178,7 +1178,8 @@ h1, h2, h3, h4, h5, h6, span, p {
     font-size: 12px;
     line-height: 15px; }
     .navbar-menu--visible {
-      display: block; }
+      display: block;
+      overflow: auto; }
     .navbar-menu__wrapper {
       flex-direction: column; }
     .navbar-menu__item {
@@ -1257,12 +1258,18 @@ h1, h2, h3, h4, h5, h6, span, p {
       left: 20%; }
     .reviews-slider__button--next {
       right: 20%; }
+  .reviews__header {
+    font-size: 23px; }
   .activities-wrapper {
     flex-direction: column;
     align-items: center; }
   .activities-item {
     width: 280px;
     height: 255px; }
+  .activities__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
   .footer {
     padding-top: 69px; }
     .footer__wrapper {
@@ -1346,8 +1353,10 @@ h1, h2, h3, h4, h5, h6, span, p {
       align-items: flex-start;
       flex-wrap: wrap;
       align-content: space-between; }
-    .newsletter-input__text {
-      padding-left: 19px; }
+    .newsletter-input {
+      align-self: center; }
+      .newsletter-input__text {
+        padding-left: 19px; }
     .newsletter__text {
       font-size: 20px;
       margin-bottom: 25px; }
@@ -1379,6 +1388,9 @@ h1, h2, h3, h4, h5, h6, span, p {
     padding-top: 43px;
     padding-bottom: 33px; }
     .activities__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
       font-size: 15px;
       line-height: 23px;
       margin-bottom: 36px; }
