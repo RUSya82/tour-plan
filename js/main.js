@@ -35,3 +35,13 @@ const reviewsSwiper = new Swiper('.reviews-slider__container', {
         onlyInViewport: true
     },
 });
+
+const menuToggle = () => {
+    const menu = document.querySelector('.navbar-menu');
+    const menuButton = document.querySelector('.menu-button');
+    menuButton.addEventListener('click', (e) => {
+       menu.classList.toggle('navbar-menu--visible');
+    });
+};
+
+menuToggle();

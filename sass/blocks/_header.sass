@@ -9,6 +9,9 @@
     text-transform: uppercase
     padding: 31px 0
     letter-spacing: 0.2px
+    &__item
+      &--mobile-visible
+        display: none
 .navbar-top
   background-color: #ffffff
   height: 120px
@@ -20,6 +23,8 @@
     margin-left: 108px
   &__menu-button
     display: none
+
+
 .search
   width: 350px
   height: 40px
@@ -60,6 +65,9 @@
     margin-left: 16px
     font-size: 14px
     line-height: 18px
+    &--mobile
+      margin-left: 0
+      text-transform: capitalize
 .navbar-menu
   &__wrapper
     +flex-sb-center

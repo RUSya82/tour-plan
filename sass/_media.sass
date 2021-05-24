@@ -202,17 +202,53 @@
         width: 280px
         margin-left: auto
 @media (max-width: 580px)
+  body
+    padding-top: 90px
   .navbar
     &-menu
       display: none
-    &-top
-      &__search
-        display: none
+      position: fixed
+      left: 0
+      right: 0
+      bottom: 0
+      top: 90px
+      padding: 31px 0
+      font-size: 12px
+      line-height: 15px
+      &--visible
+        display: block
+      &__wrapper
+        flex-direction: column
+      &__item
+        margin-bottom: 20px
+        &--mobile-visible
+          display: flex
       &__user
-        display: none
+        margin-bottom: 27px
+      &__search
+        margin-bottom: 39px
+    &-top
       &__menu-button
         display: flex
         border: none
+      &--mobile-hidden
+        display: none
+      &__user
+        &--mobile
+          flex-direction: column
+      &__search
+        width: 245px
+    &--mobile-fixed
+      position: fixed
+      left: 0
+      top: 0
+      right: 0
+      z-index: 99
+  .user
+    &__avatar
+      &--mobile
+        margin-bottom: 10px
+
   .hotel
     padding-bottom: 60px
     &-rating
@@ -315,6 +351,8 @@
 
 
 @media (max-width: 320px)
+  body
+    padding-top: 74px
   .container
     width: 87%
   .logo
@@ -347,9 +385,11 @@
       height: 171px
   .navbar
     &-top
-      height: 70px
+      height: 74px
       &__menu-button
         margin-top: 6px
+    &-menu
+      top: 74px
   .newsletter
     padding: 73px 0 83px 0
     &__container

@@ -14,19 +14,19 @@
     <title>Best tour plan - Hotel Booking</title>
 </head>
 <body>
-<header class="navbar">
+<header class="navbar navbar--mobile-fixed">
     <div class="navbar-top">
         <div class="container navbar-top__container">
             <a href="#" class="logo navbar__logo">
                 <img src="img/logo-gorisontal.svg" alt="Logo: Best Tour Plan" class="logo__img">
             </a>
-            <form action="#" class="search navbar-top__search">
+            <form action="#" class="search navbar-top__search navbar-top--mobile-hidden">
                 <input type="text" class="search__input" placeholder="Search Location">
                 <button class="search__btn">
                     <img src="img/search-icon.svg" alt="icon: search">
                 </button>
             </form>
-            <a href="#" class="user navbar-top__user">
+            <a href="#" class="user navbar-top__user navbar-top--mobile-hidden">
                 <img src="img/user-avatar.jpeg" class="user__avatar" alt="avatar: Nathan">
                 <span class="user__name">Nathan</span>
             </a>
@@ -42,6 +42,20 @@
     <nav class="navbar-menu">
         <div class="container navbar__container">
             <ul class="navbar-menu__wrapper">
+                <li class="navbar-menu__item navbar-menu__user navbar-menu__item--mobile-visible">
+                    <a href="#" class="user navbar-top__user navbar-top__user--mobile">
+                        <img src="img/user-avatar.jpeg" class="user__avatar user__avatar--mobile" alt="avatar: Nathan">
+                        <span class="user__name user__name--mobile">Nathan</span>
+                    </a>
+                </li>
+                <li class="navbar-menu__item navbar-menu__search navbar-menu__item--mobile-visible">
+                    <form action="#" class="search navbar-top__search ">
+                        <input type="text" class="search__input" placeholder="Search Location">
+                        <button class="search__btn">
+                            <img src="img/search-icon.svg" alt="icon: search">
+                        </button>
+                    </form>
+                </li>
                 <li class="navbar-menu__item">
                     <a href="#" class="navbar-menu__link">All Deals</a>
                 </li>
@@ -191,7 +205,7 @@
     <div class="container newsletter-container">
         <div class="newsletter__text">
             <span>subscribe to our</span>
-            <span class="newsletter__text--big">Newsletter</span>
+            <h3 class="newsletter__text--big">Newsletter</h3>
         </div>
         <form action="#" class="search newsletter-input newsletter__input">
             <input type="text" class="search__input newsletter-input__text" placeholder="Your email address">
@@ -442,7 +456,7 @@
                     </div>
                     <ul class="footer__list footer-list">
                         <li class="footer-list__item">
-                            Tel (business hours) : <a href="tel:269 1500">269 1500</a>
+                            Tel (business hours) : <a href="tel:2691500">269 1500</a>
                         </li>
                         <li class="footer-list__item">
                             Tel (hotline) Monday - Saturday: <a href="tel:52-56-61-38">52-56-61-38</a> (08:00 am – 20:00 pm)
