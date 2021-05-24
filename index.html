@@ -207,8 +207,8 @@
             <span>subscribe to our</span>
             <h3 class="newsletter__text--big">Newsletter</h3>
         </div>
-        <form action="#" class="search newsletter-input newsletter__input">
-            <input type="text" class="search__input newsletter-input__text" placeholder="Your email address">
+        <form action="#" class="search newsletter-input newsletter__input subscribe-form" data-name="subscribe-form">
+            <input type="text"  name="useremail" class="search__input newsletter-input__text" placeholder="Your email address">
             <button class="search__btn newsletter-input__btn">
                 Send
             </button>
@@ -482,7 +482,7 @@
                 <h3 class="footer-header footer__header footer-feedback__header">
                     Send us a message
                 </h3>
-                <form action="#" class="footer__form footer-form">
+                <form action="#" class="footer__form footer-form feedback-form" data-name="feedback-form">
                     <input type="text" placeholder="Your Full Name*" name="username" class="footer-feedback__name footer-input">
                     <input type="text" placeholder="Phone Number*" name="userphone" class="footer-feedback__phone footer-input">
                     <textarea name="usermessage" id="usermessage" cols="30" rows="10" class="footer-feedback__message footer-input" placeholder="Message"></textarea>
