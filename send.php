@@ -30,6 +30,19 @@ if ($form_name == 'feedback-form') {
 <div>
 <h2>$title</h2>
 <b>E-mail:</b> $email<br>";
+} else if ('booking-form'){
+    $phone = $obj['userphone'];
+    $name = $obj['username'];
+    $message = $obj['usermessage'];
+    $email = $obj['useremail'];
+    $title = "New booking request from the Tour Plan website from the user $name";
+    $body = "
+<div>
+<h2>$title</h2>
+<b>Phone:</b> $phone<br>
+<b>Name  :</b> $name<br>
+<b>E-mail:</b> $email<br>
+<b>Message:</b> $message<br>";
 }
 
 

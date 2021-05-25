@@ -353,11 +353,30 @@
     &-feedback
       &__message
         width: 100%
+  .modal
+    &__input
+      width: 100%
+    &__message
+      width: 100%
+    &-body
+      padding: 33px 0
+    &-content
+      max-width: 96%
+    &__required
+      order: -1
+    &-form
+      width: 85%
+      &__button-wrapper
+        flex-direction: column
+        align-items: flex-start
+        margin-top: 15px
+      &__button
+        margin-top: 15px
 
 
 @media (max-width: 320px)
   body
-    padding-top: 74px
+    padding-top: 70px
   .container
     width: 87%
   .logo
@@ -479,6 +498,8 @@
         margin-top: 16px
     &-bottom
       flex-direction: column
+  .modal
+    align-items: flex-start
   .required-fields
     order: -1
 
