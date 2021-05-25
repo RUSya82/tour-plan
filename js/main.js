@@ -51,10 +51,19 @@ const formListener = () => {
     const feedBackForm = document.querySelector('.feedback-form');
     const subscribeForm = document.querySelector('.subscribe-form');
     const modalForm = document.querySelector('.modal-form');
-    bindForm(feedBackForm);
-    bindForm(subscribeForm);
-    bindForm(modalForm, () => {
-        modal.closeModal();
-    });
+    if (feedBackForm){
+        bindForm(feedBackForm, () => {
+            window.location.assign('thanks.html');
+        });
+    }
+    if(subscribeForm){
+        bindForm(subscribeForm);
+    }
+    if(modalForm){
+        bindForm(modalForm, () => {
+            modal.closeModal();
+        });
+    }
+
 };
 formListener();
