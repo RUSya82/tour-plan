@@ -1043,6 +1043,14 @@ h1, h2, h3, h4, h5, h6, span, p {
     line-height: 15px;
     padding: 18px 65px; }
 
+.go-home {
+  margin-top: 30px; }
+  .go-home__btn {
+    padding: 25px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px; }
