@@ -1,18 +1,29 @@
-export class Modal {
+class Modal {
     constructor({
-                    modalClassName = 'modal',
+                    modal ,
                     buttonsClassName = 'modal-activator',
                     modalActiveClass = 'modal--active',
                     modalContentClass = 'modal-content',
                     buttonCloseClass = 'modal-close',
+                    useEscape = true,
+                    useFadeCLose = true,
                 }) {
-        this.modal = document.querySelector('.' + modalClassName);
-        this.modalActivators = document.querySelectorAll('.' + buttonsClassName);
-        this.modalActiveClass = modalActiveClass;
-        this.modalContentClass = modalContentClass;
-        this.buttonCloseClass = buttonCloseClass;
-        this.modalClassName = modalClassName;
-        this.init();
+        try{
+            this.modal = modal;
+            this.modalActivators = document.querySelectorAll('.' + buttonsClassName);
+            this.modalActiveClass = modalActiveClass;
+            this.modalContentClass = modalContentClass;
+            this.buttonCloseClass = buttonCloseClass;
+            this.useEscape = useEscape;
+            this.useFadeCLose = useFadeCLose;
+            if (modal){
+                this.init();
+            }
+        } catch (error){
+
+        }
+
+
     }
 
     init() {
@@ -27,29 +38,33 @@ export class Modal {
             });
         });
         this.modal.addEventListener('click', (e) => {
-            console.log(this.modalContentClass)
-            const isModal = e.target.closest(`.${this.modalContentClass}`);
+            let isModal;
+            if(this.useFadeCLose){
+                isModal = e.target.closest(`.${this.modalContentClass}`);
+            } else {
+                isModal = true;
+            }
             const isCloseBtn = e.target.closest(`.${this.buttonCloseClass}`);
             if (!isModal || isCloseBtn) {
                 this.closeModal();
             }
         });
-        document.addEventListener('keydown', (event) =>  {
-            if (event.key === 'Escape') {
-                const activeModal = document.querySelector(`.${this.modalClassName}.${this.modalActiveClass}`);
-                if (activeModal) {
+        if(this.useEscape){
+            document.addEventListener('keydown', (event) =>  {
+                if (event.key === 'Escape') {
                     this.closeModal();
                 }
-            }
-        });
+            });
+        }
+
     }
 
-    openModal(callback = this.blockBody.bind(this)) {
+    openModal(callback = () => this.blockBody()) {
         this.modal.classList.add(this.modalActiveClass);
         callback();
     }
 
-    closeModal(callBack = this.unBlockBody.bind(this)) {
+    closeModal(callBack = () => this.unBlockBody()) {
         this.modal.classList.remove(this.modalActiveClass);
         callBack();
     }
@@ -92,3 +107,18 @@ export class Modal {
         }, 200)
     }
 }
+
+function modalGetInstance(){
+    const data = [];
+    return function (params){
+        let object = data.find(item => item.modal === params.modal);
+        if(object){
+            return object;
+        } else {
+            const obj = new Modal(params);
+            data.push(obj);
+            return obj;
+        }
+    }
+}
+export const modalInstance = modalGetInstance();

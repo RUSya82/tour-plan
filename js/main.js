@@ -1,72 +1,25 @@
-import { Modal} from "./modal.js";
-import { bindForm} from "./bindForm.js";
+import { modalInstance } from "./modules/modal.js";
+import { slidersInit } from "./modules/slidersInit.js";
+import { menuToggle } from "./modules/menuToggle.js";
+import { formListener } from "./modules/formListener.js";
+import {maskInputs} from "./modules/maskInput.js";
 
 document.addEventListener('DOMContentLoaded', () => {
-    const modal = new Modal({});
-
-    const hotelSwiper = new Swiper('.hotel-slider__container', {
-        // Optional parameters
-        loop: true,
-        // Navigation arrows
-        navigation: {
-            nextEl: '.hotel-slider__arrow--next',
-            prevEl: '.hotel-slider__arrow--prev',
-        },
-        keyboard: {
-            enable: true,
-            onlyInViewport: true
-        },
+    //bind popup
+    const modalPopup = document.querySelector('.modal');
+    const modal = modalInstance({
+        modal: modalPopup,
     });
 
-// document.addEventListener('click', e => {
-//     console.log(e.target)
-// })
-    const reviewsSwiper = new Swiper('.reviews-slider__container', {
-        // Optional parameters
-        loop: true,
+    //init sliders
+    slidersInit();
 
-        centeredSlides: true,
-        slidesPerView: 1,
-        speed: 500,
-        // Navigation arrows
-        navigation: {
-            nextEl: '.reviews-slider__button--next',
-            prevEl: '.reviews-slider__button--prev',
-        },
-        keyboard: {
-            enable: true,
-            onlyInViewport: true
-        },
-    });
-
-    const menuToggle = () => {
-        const menu = document.querySelector('.navbar-menu');
-        const menuButton = document.querySelector('.menu-button');
-        menuButton.addEventListener('click', (e) => {
-            menu.classList.toggle('navbar-menu--visible');
-        });
-    };
+    //init toggle menu
     menuToggle();
 
-    const formListener = () => {
-        const feedBackForm = document.querySelector('.feedback-form');
-        const subscribeForm = document.querySelector('.subscribe-form');
-        const modalForm = document.querySelector('.modal-form');
-        if (feedBackForm){
-            bindForm(feedBackForm, () => {
-                window.location.assign('thanks.html');
-            });
-        }
-        if(subscribeForm){
-            bindForm(subscribeForm);
-        }
-        if(modalForm){
-            bindForm(modalForm, () => {
-                modal.closeModal();
-            });
-        }
-
-    };
+    //init send form
     formListener();
+
+    maskInputs();
 });
 

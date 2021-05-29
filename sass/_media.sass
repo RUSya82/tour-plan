@@ -201,6 +201,8 @@
       &__search
         width: 280px
         margin-left: auto
+  .newsletter-input
+    width: 280px
 @media (max-width: 580px)
   body
     padding-top: 90px
@@ -485,6 +487,7 @@
     &-input
       width: 100%
     &-feedback
+      margin-bottom: 28px
       &__header
         margin-bottom: 14px
       &__name
@@ -498,6 +501,16 @@
         margin-top: 16px
     &-bottom
       flex-direction: column
+      margin-top: 0
+      &__wrapper
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        flex-basis: auto
+      &__links
+        margin-left: 0
+      &__payments
+        margin-top: 10px
   .modal
     align-items: flex-start
   .required-fields

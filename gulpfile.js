@@ -15,7 +15,7 @@ gulp.task('sass', () => {
         }))
         .pipe(concat('main.css'))
         .pipe(autoprefix({
-            browsersList: ['last 20 versions'],
+            browsersList: ['last 8 versions'],
             cascade: true
         }))
         .pipe(gulp.dest(distCSS))

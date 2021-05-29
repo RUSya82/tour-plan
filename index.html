@@ -208,7 +208,11 @@
             <h3 class="newsletter__text--big">Newsletter</h3>
         </div>
         <form action="#" class="search newsletter-input newsletter__input subscribe-form" data-name="subscribe-form">
-            <input type="text"  name="useremail" class="search__input newsletter-input__text" placeholder="Your email address">
+            <div class="input-wrapper newsletter__input-wrapper">
+                <input type="text"  name="useremail" class="search__input newsletter-input__text  user-email" placeholder="Your email address">
+                <div class="error-message"><sup>*</sup>введите корректный email</div>
+            </div>
+
             <button class="search__btn newsletter-input__btn">
                 Send
             </button>
@@ -482,10 +486,16 @@
                 <h3 class="footer-header footer__header footer-feedback__header">
                     Send us a message
                 </h3>
-                <form action="#" class="footer__form footer-form feedback-form" data-name="feedback-form">
-                    <input type="text" placeholder="Your Full Name*" name="username" class="footer-feedback__name footer-input site-input">
-                    <input type="text" placeholder="Phone Number*" name="userphone" class="footer-feedback__phone footer-input site-input">
-                    <textarea name="usermessage" id="usermessage" cols="30" rows="10" class="footer-feedback__message footer-input site-input" placeholder="Message"></textarea>
+                <form action="#" class="footer__form footer-form feedback-form order-form" data-name="feedback-form">
+                    <div class="input-wrapper footer-feedback__name footer-input">
+                        <input type="text" placeholder="Your Full Name*" name="username" class="footer-feedback__name-input footer-input site-input error user-name">
+                        <div class="error-message"><sup>*</sup>в имени должно быть минимум 2 буквы</div>
+                    </div>
+                    <div class="input-wrapper footer-feedback__phone footer-input">
+                        <input type="text" placeholder="Phone Number*" name="userphone" class="footer-feedback__phone-input  site-input user-phone">
+                        <div class="error-message"><sup>*</sup>введите корректный телефон +7(999)999-99-99</div>
+                    </div>
+                    <textarea name="usermessage" id="usermessage" cols="30" rows="10" class="user-message footer-feedback__message footer-input site-input" placeholder="Message"></textarea>
                     <div class="footer-form__button-wrapper">
                         <button class="site-button footer-feedback__button">Send</button>
                         <p class="required-fields"><sup>*</sup> Required Fields</p>
@@ -515,11 +525,20 @@
 <div class="modal">
     <div class="modal__content modal-body modal-content">
         <h3 class="modal__header">Booking</h3>
-        <form action="#" class="modal__form modal-form" data-name="booking-form">
-            <input type="text" name="username" class=" site-input modal__input" placeholder="Your Full Name*">
-            <input type="text" name="userphone" class=" site-input modal__input" placeholder="Phone Number*">
-            <input type="text" name="useremail" class=" site-input modal__input" placeholder="Email*">
-            <textarea name="usermessage" id="modal-message" cols="30" rows="30" class="footer-input modal__message"></textarea>
+        <form action="#" class="modal__form modal-form order-form" data-name="booking-form">
+            <div class="input-wrapper modal-form__input-wrapper">
+                <input type="text" name="username" class=" site-input modal__input error user-name" placeholder="Your Full Name*">
+                <div class="error-message"><sup>*</sup>в имени должно быть минимум 2 буквы</div>
+            </div>
+            <div class="input-wrapper modal-form__input-wrapper">
+                <input type="text" name="userphone" class=" site-input modal__input user-phone" placeholder="Phone Number*">
+                <div class="error-message"><sup>*</sup>введите корректный телефон +7(999)999-99-99</div>
+            </div>
+            <div class="input-wrapper modal-form__input-wrapper">
+                <input type="text" name="useremail" class=" site-input modal__input user-email" placeholder="Email*">
+                <div class="error-message"><sup>*</sup>введите корректный email</div>
+            </div>
+            <textarea name="usermessage" id="modal-message" cols="30" rows="30" class="footer-input modal__message user-message"></textarea>
             <div class="modal-form__button-wrapper">
                 <button class="site-button modal-button modal-form__button">Send</button>
                 <p class="required-fields modal__required"><sup>*</sup> Required Fields</p>
@@ -530,7 +549,7 @@
         </div>
     </div>
 </div>
-<script src="js/swiper-bundle.min.js" async ></script>
+<script src="js/swiper-bundle.min.js" defer ></script>
 <script src="js/main.js" type="module" defer></script>
 </body>
 </html>
