@@ -83,5 +83,4 @@ export const bindForm = (form, callback) => {
         }
         formSender(form, new Validator(form, initArray));
     console.log(initArray)
-
 };

@@ -222,16 +222,32 @@
                 <h3 class="footer-header footer__header footer-feedback__header">
                     Send us a message
                 </h3>
-                <form action="#" class="footer__form footer-form feedback-form" data-name="feedback-form">
-                    <input type="text" placeholder="Your Full Name*" name="username" class="footer-feedback__name footer-input site-input">
-                    <input type="text" placeholder="Phone Number*" name="userphone" class="footer-feedback__phone footer-input site-input">
-                    <textarea name="usermessage" id="usermessage" cols="30" rows="10" class="footer-feedback__message footer-input site-input" placeholder="Message"></textarea>
+                <form action="#" class="footer__form footer-form feedback-form order-form" data-name="feedback-form">
+                    <div class="input-wrapper footer-feedback__name footer-input">
+                        <input type="text" placeholder="Your Full Name*" name="username" class="footer-feedback__name-input footer-input site-input error user-name">
+                        <div class="error-message"><sup>*</sup>в имени должно быть минимум 2 буквы</div>
+                    </div>
+                    <div class="input-wrapper footer-feedback__phone footer-input">
+                        <input type="tel" placeholder="Phone Number*" name="userphone" class="footer-feedback__phone-input  site-input user-phone">
+                        <div class="error-message"><sup>*</sup>введите корректный телефон +7(999)999-99-99</div>
+                    </div>
+                    <textarea name="usermessage" id="usermessage" cols="30" rows="10" class="user-message footer-feedback__message footer-input site-input" placeholder="Message"></textarea>
                     <div class="footer-form__button-wrapper">
                         <button class="site-button footer-feedback__button">Send</button>
                         <p class="required-fields"><sup>*</sup> Required Fields</p>
                     </div>
 
                 </form>
+<!--                <form action="#" class="footer__form footer-form feedback-form" data-name="feedback-form">-->
+<!--                    <input type="text" placeholder="Your Full Name*" name="username" class="footer-feedback__name footer-input site-input">-->
+<!--                    <input type="text" placeholder="Phone Number*" name="userphone" class="footer-feedback__phone footer-input site-input">-->
+<!--                    <textarea name="usermessage" id="usermessage" cols="30" rows="10" class="footer-feedback__message footer-input site-input" placeholder="Message"></textarea>-->
+<!--                    <div class="footer-form__button-wrapper">-->
+<!--                        <button class="site-button footer-feedback__button">Send</button>-->
+<!--                        <p class="required-fields"><sup>*</sup> Required Fields</p>-->
+<!--                    </div>-->
+
+<!--                </form>-->
             </div>
             <div class="footer__bottom  footer-bottom">
                 <div class="footer-bottom__wrapper">
