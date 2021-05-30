@@ -4,6 +4,7 @@ import { menuToggle } from "./modules/menuToggle.js";
 import { formListener } from "./modules/formListener.js";
 import {maskInputs} from "./modules/maskInput.js";
 
+
 document.addEventListener('DOMContentLoaded', () => {
     //bind popup
     const modalPopup = document.querySelector('.modal');
